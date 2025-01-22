@@ -171,4 +171,5 @@ int main() {
     cout << LIS({1, 3, 4, 2, 5}) << endl; // 4
     cout << cntsets(7) << endl; // 8
     cout << cntmatmult({4, 2, 5, 3}) << endl; // 54
+    return 0;
 }
