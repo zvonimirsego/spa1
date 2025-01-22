@@ -163,6 +163,14 @@ string bignumk(string S, int k) {
 		{
 			swap(S[index], S[A[index].second]);
 			swaps++;
+			int temp = A[index].second;
+			for(auto& p : A)
+				if(p.second == index) {
+					p.second = temp;
+					break;
+				}
+			A[index].second = index;
+
 		}
 		++index;
 	}
@@ -187,6 +195,6 @@ int main() {
 	cout << collecting({1, 3, 4, 2, 5}) << endl; // 2
 	cout << bignumk("24563", 2) << endl; // 65423
 	cout << bignumk("123456789", 3) << endl; // 987456321
-	cout << bignumk("4720931", 3) << endl; // 9743201 - ovo ne radi i ne da mi se debugat
+	cout << bignumk("4720931", 3) << endl; // 9743201
 	return 0;
 }
